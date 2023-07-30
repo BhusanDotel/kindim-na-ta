@@ -1,0 +1,172 @@
+body{
+    background-color: rgb(197, 193, 193);
+}
+.image{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100px;
+}
+.main{
+    margin-top: 100px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: 200px 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0);
+}
+.left-section{
+    height: 400px;
+    overflow: hidden;
+    position: relative; 
+    border-top-left-radius: 50px;
+}
+.jd-image{
+    height: 300%;
+    width: 300%;
+    object-position: center;
+    object-fit: cover;
+    position: absolute;
+    top: 60%;
+    left: 104%;
+    transform: translate(-50%, -50%);
+}
+.right-section{
+    height: 400px;
+}
+.div-to-flex{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(0, 0, 0);
+}
+.message{
+    color: red;
+}
+.input-div{
+    margin-top: 5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+input{
+    height: 30px;
+    background-color: lightgrey;
+    border: 1px solid rgb(134, 134, 134);
+    outline: none;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+input::placeholder{
+    color: rgb(65, 65, 65);
+}
+button{
+    height: 30px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(233, 135, 8);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.9;
+}
+button:active{
+    transform: scale(0.9);
+}
+.div-to-flex-2{
+    display: flex;
+    justify-content: center;
+}
+.already-user{
+    color: white;
+}
+.click-here-1{
+    color: aqua;
+}
+.registration-success{
+    display: flex;
+    justify-content: center;
+}
+.reg-complete{
+    color: rgb(15, 95, 4);
+    font-size: large;
+    font-weight: bolder;
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    .image{
+        width: 100px;
+        margin-top: 5px;
+    }
+    .main{
+        margin-top: 100px;
+        width: 300px;
+        display: grid;
+        grid-template-columns: 100px 200px;
+    }
+    .left-section{
+        height: 300px;
+        overflow: hidden;
+        position: relative; 
+        border-top-left-radius: 25px;
+    }
+    .jd-image{
+        height: 300%;
+        width: 300%;
+        object-position: center;
+        object-fit: cover;
+        position: absolute;
+        top: 60%;
+        left: 104%;
+        transform: translate(-50%, -50%);
+    }
+    .right-section{
+        height: 200px;
+    }
+
+    .container{
+        box-sizing: border-box;
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .input-div{
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: 175px;
+        row-gap: 15px;
+    }
+    input{
+        height: 15px;
+        padding-left: 5px;
+        border-radius: 5px;
+    }
+
+    button{
+        height: 20px;
+    }
+
+    .already-user{
+        color: white;
+        font-size: small;
+        margin-top: 30px;
+    }
+
+    .reg-complete{
+        width: 300px;
+        color: rgb(15, 95, 4);
+        font-size: small;
+        font-weight: bold;
+    }
+}
