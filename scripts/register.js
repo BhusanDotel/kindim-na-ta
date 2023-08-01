@@ -35,8 +35,8 @@ register.addEventListener('click', () => {
 
             document.querySelector(".registration-complete-div").innerHTML=`<p class="registration-complete-text">Registration Successfull <span class="tick">✓</span>`;
 
-            document.querySelector(".redirecting-to-login-div").innerHTML=`                    <p class="redirecting-to-login-text">Redirecting to Login</p>
-            <img class="loading-icon" src="https://cdn.hailstrike.com/js/md/leads/images/simple-spinner.gif">`;
+            document.querySelector(".redirecting-to-login-div").innerHTML=`<p class="redirecting-to-login-text">Redirecting to Login</p>
+            <img class="loading-icon" src="images/loading-gif.gif">`;
 
             redirectToLogin();
         }
