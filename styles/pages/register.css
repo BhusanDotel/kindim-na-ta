@@ -1,172 +1,219 @@
 body{
-    background-color: rgb(197, 193, 193);
-}
-.image{
-    margin-top: 10px;
-    margin-left: 20px;
-    width: 100px;
-}
-.main{
-    margin-top: 100px;
-    width: 600px;
-    display: grid;
-    grid-template-columns: 200px 400px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-    border-radius: 50px;
-    background-color: rgb(0, 0, 0);
-}
-.left-section{
-    height: 400px;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    position: relative; 
-    border-top-left-radius: 50px;
+    position: relative;
+    height: 1000px;
 }
-.jd-image{
-    height: 300%;
-    width: 300%;
-    object-position: center;
-    object-fit: cover;
+.background-image{
     position: absolute;
-    top: 60%;
-    left: 104%;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
 }
-.right-section{
-    height: 400px;
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+p{
+    font-family:Roboto, Arial;
 }
 .div-to-flex{
     display: flex;
     justify-content: center;
+}.main{
+    position: absolute;
+    top: 100px;
+    background-color: white;
+    width: 350px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
 }
 .container{
-    box-sizing: border-box;
-    width: 100%;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: rgb(0, 0, 0);
-}
-.message{
-    color: red;
-}
-.input-div{
-    margin-top: 5px;
-    width: 100%;
+    width: 280px;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 20px;
+    grid-template-rows: 50px 40px 20px 20px 240px 55px 30px 45px;
+}
+.logo-div{
+    display: grid;
+    grid-template-columns: 110px 30px ;
+    justify-content: center;
+    align-items: center;
+}
+.logo-text{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(141, 141, 141);
+}
+.mini-logo{
+    height: 30px;
+    width: 30px;
+}
+.register-here-div{
+    display: flex;
+    justify-content: center; 
+    align-items: end;
+}
+.register-here-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    margin: 0;
+    font-weight: 700;
+}
+.enter-details-div{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.enter-details-text{
+    font-size:8px;
+    color: rgb(122, 122, 122);
+    margin: 0;
+    font-weight: bold;
+}
+.email-already-use-text{
+    margin: 0;
+    color: red;
+    font-size: 12px;
+    display: flex;
+    margin-top: 7px;
+    margin-left: 10px;
+    align-items: end;
+}
+.input-div{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 45px);
+    row-gap: 3px;
 }
 input{
-    height: 30px;
-    background-color: lightgrey;
-    border: 1px solid rgb(134, 134, 134);
+    border: 1px solid rgb(83, 83, 83);
     outline: none;
-    padding-left: 10px;
     border-radius: 10px;
+    padding-left: 10px;
+    font-weight: 700;
 }
-input::placeholder{
-    color: rgb(65, 65, 65);
+.button-div{
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
-button{
-    height: 30px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(233, 135, 8);
+.register-button{
+    height: 40px;
+    width: 70%;
+    background-color: rgb(243, 58, 58);
+    color: white;
+    font-size: large;
+    font-weight: bold;
     border: none;
     outline: none;
-    border-radius: 10px;
-    font-weight: bolder;
+    border-radius: 3px;
     cursor: pointer;
 }
-button:hover{
+.register-button:hover{
     opacity: 0.9;
 }
-button:active{
-    transform: scale(0.9);
+.already-user-div{
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
-.div-to-flex-2{
+.already-user-text{
+    margin: 0;
+    font-size: small;
+}
+.login-here-text{
+    color: green;
+}
+.registration-complete-div{
     display: flex;
     justify-content: center;
 }
-.already-user{
-    color: white;
-}
-.click-here-1{
-    color: aqua;
-}
-.registration-success{
-    display: flex;
-    justify-content: center;
-}
-.reg-complete{
-    color: rgb(15, 95, 4);
-    font-size: large;
+.tick{
+    color: green;
     font-weight: bolder;
+    font-size: larger;
+}
+.redirecting-to-login-div{
+    display: grid;
+    grid-template-columns: 110px 20px;
+    justify-content: center;
+    align-items: center;
+}
+.redirecting-to-login-text{
+    font-size: 12px;
+}
+.loading-icon{
+    height: 20px;
+    width: 20px;
 }
 
-@media screen and (min-width:300px) and (max-width:600px) {
-    .image{
-        width: 100px;
-        margin-top: 5px;
+.shake {
+    animation-name: shake;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-15px);
+    }
+    50% {
+        transform: translateX(15px);
+    }
+}
+
+@media screen and (min-width:30px) and (max-width:600px) {
+    body{
+        height: 800px;
+        overflow: scroll;
+    }
+    .logo{
+        width: 30px;
+        height: 30px;
     }
     .main{
-        margin-top: 100px;
-        width: 300px;
-        display: grid;
-        grid-template-columns: 100px 200px;
+        top: 80px;
+        width: 260px;
     }
-    .left-section{
-        height: 300px;
-        overflow: hidden;
-        position: relative; 
-        border-top-left-radius: 25px;
-    }
-    .jd-image{
-        height: 300%;
-        width: 300%;
-        object-position: center;
-        object-fit: cover;
-        position: absolute;
-        top: 60%;
-        left: 104%;
-        transform: translate(-50%, -50%);
-    }
-    .right-section{
-        height: 200px;
-    }
-
     .container{
-        box-sizing: border-box;
-        width: 100%;
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        width: 200px;
+        padding-top:10px;
+        padding-bottom: 5px;
+        grid-template-rows: 25px 40px 10px 20px 185px 45px 30px 45px;
+    }
+    .logo-div{
+        grid-template-columns: 90px 20px ;  
+    }
+    .logo-text{
+        font-size: 12px;
+    }
+    .mini-logo{
+        height: 25px;
+        width: 25px;
+    }
+    .register-here-text{
+        font-size: 20px;
     }
     .input-div{
-        margin-top: 20px;
-        display: grid;
-        grid-template-columns: 175px;
-        row-gap: 15px;
+        grid-template-rows: repeat(5, 35px);
     }
-    input{
-        height: 15px;
-        padding-left: 5px;
-        border-radius: 5px;
+    .register-button{
+        height: 35px;
+        font-size: large;
     }
 
-    button{
-        height: 20px;
-    }
-
-    .already-user{
-        color: white;
-        font-size: small;
-        margin-top: 30px;
-    }
-
-    .reg-complete{
-        width: 300px;
-        color: rgb(15, 95, 4);
-        font-size: small;
-        font-weight: bold;
-    }
 }

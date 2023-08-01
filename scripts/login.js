@@ -12,7 +12,12 @@ register.addEventListener('click', () => {
         alert("Please! fill all fields")
     }else{
         if(credential.length===0){
-            document.querySelector(".login-fail").innerHTML=`<p class="login-fail-message">Email and Password unverified! If your aren't a user!<a class="click-here-1" href="./register.html">click here</a> to register</p>`;
+            document.querySelector(".login-fail-div").innerHTML=`<p class="login-fail-text">I couldn't recognize you. Try again!</p>`;
+
+            startShake();
+
+            document.querySelector(".email-input").value="";
+            document.querySelector(".password-input").value="";
         }else{
             credential.forEach((items) =>{
                 const saved_email = items.userEmail;
@@ -22,9 +27,24 @@ register.addEventListener('click', () => {
                     const newURL = './home.html';
                     window.location.href = newURL;
                 }else{
-                    document.querySelector(".login-fail").innerHTML=`<p class="login-fail-message">Email and Password not matched! If your are new !<a class="click-here-1" href="./register.html">click here</a> to register</p>`;
+                    document.querySelector(".login-fail-div").innerHTML=`<p class="login-fail-text">I couldn't recognize you. Try again!</p>`;
+
+                    startShake();
+
+                    document.querySelector(".email-input").value="";
+                    document.querySelector(".password-input").value="";
                 }                   
             });
         }
     }
 });
+
+function startShake(){
+    const shake_div = document.querySelector(".main");
+    shake_div.classList.add("shake");
+    setTimeout(() => {
+        shake_div.classList.remove('shake')
+    },100);
+
+    console.log(shake_div);
+}

@@ -5,9 +5,9 @@ register.addEventListener('click', () => {
     const email = document.querySelector(".email-input").value;
     const password = document.querySelector(".password-input").value;
 
-    const text1 = document.querySelector(".text1-input").value;
-    const text2 = document.querySelector(".text2-input").value;
-    const text3 = document.querySelector(".text3-input").value;
+    const text1 = document.querySelector(".fname-input").value;
+    const text2 = document.querySelector(".lname-input").value;
+    const text3 = document.querySelector(".address-input").value;
 
     if (email === '' || password === '' || text1==='' || text2==="" || text3==="") {
         alert('Please, fill all fields!');
@@ -15,7 +15,10 @@ register.addEventListener('click', () => {
         const emailExists = credential.some(item => item.userEmail === email);
         if (emailExists) {
             // alert('Email already exists!');
-            document.querySelector(".message").textContent="Email already exists!";
+
+            startShake();
+
+            document.querySelector(".email-already-use-div").innerHTML=`<p class="email-already-use-text">Email already in use!</p>`;
         } else {
             credential.push({
                 userEmail: email,
@@ -24,12 +27,34 @@ register.addEventListener('click', () => {
 
             document.querySelector(".email-input").value="";
             document.querySelector(".password-input").value="";
-            document.querySelector(".text1-input").value="";
-            document.querySelector(".text2-input").value="";
-            document.querySelector(".text3-input").value="";
+            document.querySelector(".fname-input").value="";
+            document.querySelector(".lname-input").value="";
+            document.querySelector(".address-input").value="";
 
             localStorage.setItem("credential",(JSON.stringify(credential)));
-            document.querySelector(".registration-success").innerHTML=`<p class="reg-complete">Registration comlpete <a class="click-here" href="./index.html">CLick Here!</a> to login</p>`;
+
+            document.querySelector(".registration-complete-div").innerHTML=`<p class="registration-complete-text">Registration Successfull <span class="tick">✓</span>`;
+
+            document.querySelector(".redirecting-to-login-div").innerHTML=`                    <p class="redirecting-to-login-text">Redirecting to Login</p>
+            <img class="loading-icon" src="https://cdn.hailstrike.com/js/md/leads/images/simple-spinner.gif">`;
+
+            redirectToLogin();
         }
     }
 });
+
+function startShake(){
+    const shake_div = document.querySelector(".main");
+    shake_div.classList.add("shake");
+    setTimeout(() => {
+        shake_div.classList.remove('shake')
+    },100);
+
+    console.log(shake_div);
+}
+
+function redirectToLogin() {
+    setTimeout(function() {
+        window.location.href = "./index.html";
+    }, 2000);
+}

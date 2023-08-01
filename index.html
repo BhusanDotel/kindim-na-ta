@@ -2,36 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles/pages/login.css">
 </head>
 <body>
-    <div class="image-div">
-        <img class="image" src="images/logo-dark.png" alt="">
+    <div class="backgroundimage-holder">
+        <img class="background-image" src="images/background.jpg" >
     </div>
+    <img class="logo" src="images/logo-f.png">
     <div class="div-to-flex">
         <div class="main">
-            <div class="left-section">
-                <img class="jd-image" src="images/jd-image.webp">
-            </div>
-            <div class="right-section">
-                <div class="container">
-                    <div class="message"></div>
-                    <div class="input-div">
-                        <input type="email" class="email-input" placeholder="Email">
-                        <input type="password" class="password-input" placeholder="Password">
-                        <button class="login-button">Login</button>
-                    </div>
+            <div class="logo-div">
+                <div class="name-section">
+                    <p class="logo-text">KINDIM NA TA</p>
                 </div>
-                <div class="div-to-flex-2">
-                    <p class="new-user">New user? <a class="click-here-1" href="./register.html">Register</a> here!</p>
+                <div class="logo-section">
+                    <img class="mini-logo" src="images/logo.png">
+                </div>
+            </div>
+            <div class="container">
+                <div class="image-div">
+                    <img class="bottles-img" src="images/bottles.png" >
+                </div>
+                <div class="login-text-div">
+                    <p class="login-text">Login Now
+                    </p>
+                </div>    
+                 <div class="enter-text-div">
+                    <p class="enter-details">Please enter the details below to continue</p>
+                 </div> 
+                 <div class="login-fail-div">
+                    <!-- <p class="login-fail-text">I couldn't recognize you. Try again!</p> -->
+                 </div>  
+                <div class="input-div">
+                    <img class="email-icon" src="images/email-icon.jpg">
+                    <input class="email-input" type="email" placeholder="Email">
+                    <img class="password-icon" src="images/password-icon.png">
+                    <input class="password-input" type="password" placeholder="Password">
+                </div>
+                <div class="forget-password-div">
+                    <p class="forget-password">Forgot Password?</p>
+                </div>
+                <div class="button-div">
+                    <button class="login-button">LOGIN</button>
+                </div>
+                <div class="new-user-div">
+                    <p class="new-user">New User? <a class="register" href="./register.html">Register</a> Here!</p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="login-fail">
     </div>
     <script src="scripts/login.js"></script>
 </body>

@@ -2,42 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="styles/pages/register.css">
 </head>
 <body>
-    <div class="image-div">
-        <img class="image" src="images/logo-dark.png" alt="">
+    <div class="background-image-holder">
+        <img class="background-image" src="images/background.jpg" >
     </div>
+    <img class="logo" src="images/logo-f.png">
     <div class="div-to-flex">
         <div class="main">
-            <div class="left-section">
-                <img class="jd-image" src="images/jd-image.webp">
-            </div>
-            <div class="right-section">
-                <div class="container">
-                    <div class="message"></div>
-                    <div class="input-div">
-                        <input type="text" class="text1-input" placeholder="First name">
-                        <input type="text" class="text2-input" placeholder="Last name">
-                        <input type="text" class="text3-input" placeholder="Address">
-                        <input type="email" class="email-input" placeholder="Email">
-                        <input type="password" class="password-input" placeholder="Password">
-                        <button class="register-button">Register</button>
+            <div class="container">
+                <div class="logo-div">
+                    <div class="name-section">
+                        <p class="logo-text">KINDIM NA TA</p>
+                    </div>
+                    <div class="logo-section">
+                        <img class="mini-logo" src="images/logo.png">
                     </div>
                 </div>
-                <div class="div-to-flex-2">
-                    <p class="already-user">Already a user? <a class="click-here-1" href="./index.html">Login</a> here!</p>
+                <div class="register-here-div">
+                    <p class="register-here-text">REGISTER HERE</p>
+                </div>
+                <div class="enter-details-div">
+                    <p class="enter-details-text">Please enter the details below to continue</p>
+                </div>
+                <div class="email-already-use-div">
+                    <!-- <p class="email-already-use-text">Email already in use!</p> -->
+                </div>
+                <div class="input-div">
+                    <input class="fname-input" type="text" placeholder="First Name">
+                    <input class="lname-input" type="text" placeholder="Last Name">
+                    <input class="address-input" type="text" placeholder="Address">
+                    <input class="email-input" type="email" placeholder="Email">
+                    <input class="password-input" type="password" placeholder="Password">
+                </div>
+                <div class="button-div">
+                    <button class="register-button">REGISTER</button>
+                </div>
+                <div class="already-user-div">
+                    <p class="already-user-text">Already a user? <a class="login-here-text" href="./index.html">Login</a> here!</p>
+                </div>
+                <div class="registration-complete-div">
+                    <!-- <p class="registration-complete-text">Registration Successfull <span class="tick">✓</span> -->
+                    </p>
+                </div>
+                <div class="redirecting-to-login-div">
+                    <!-- <p class="redirecting-to-login-text">Redirecting to Login</p>
+                    <img class="loading-icon" src="https://cdn.hailstrike.com/js/md/leads/images/simple-spinner.gif"> -->
                 </div>
             </div>
         </div>
     </div>
-    <div class="registration-success">
-    </div>
-
     <script src="scripts/register.js"></script>
-    
 </body>
 </html>
