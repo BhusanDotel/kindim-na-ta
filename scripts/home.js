@@ -138,3 +138,18 @@ document.querySelectorAll(".js-add-to-cart").forEach((button) =>{
     });
 });
 
+const account = document.querySelector(".account");
+account.addEventListener('click',()=>{
+    const menuItems = document.querySelector(".menu-items");
+    if (menuItems.style.display === "block") {
+      menuItems.style.display = "none";
+    } else {
+      menuItems.style.display = "block";
+    }
+});
+
+const logout = document.querySelector(".log-out");
+logout.addEventListener('click',()=>{
+    localStorage.removeItem('authToken');
+    location.reload();
+});
